@@ -1,0 +1,90 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  text-align: left;
+}
+
+.projects-container .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.projects-container .projects-grid .project {
+  text-align: left;
+}
+
+.project h2:hover {
+  text-decoration: underline;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.zoom {
+  border-radius: 5px;
+  transition: transform 0.2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+.project-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.project {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(80, 0, 202, 0.08);
+  padding: 24px 16px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.project:hover {
+  box-shadow: 0 4px 16px rgba(80, 0, 202, 0.16);
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.project h2,
+.project p,
+.project a {
+  color: #222 !important; // dark text for visibility
+  text-decoration: none;
+}
+
+.project a:hover h2 {
+  color: #5000ca !important; // highlight on hover
+}
+
+.project h2,
+.project p {
+  text-align: center;
+}
+
+@media screen {
+  @media (max-width: 700px) {
+    .projects-container {
+      display: block;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .projects-container .projects-grid {
+      display: block;
+    }
+
+    .projects-container .projects-grid .project {
+      padding-bottom: 5%;
+    }
+  }
+}
